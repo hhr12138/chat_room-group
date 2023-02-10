@@ -3,9 +3,9 @@ package service
 import (
 	"database/sql"
 	"github.com/hhr12138/chat_room-utils/change"
-	"github.com/hhr12138/chat_room/mapper"
-	"github.com/hhr12138/chat_room/object"
-	"github.com/hhr12138/chat_room/vo"
+	"github.com/hhr12138/chat_room-group/mapper"
+	"github.com/hhr12138/chat_room-group/object"
+	"github.com/hhr12138/chat_room-group/vo"
 )
 
 const(

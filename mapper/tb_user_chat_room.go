@@ -1,7 +1,7 @@
 package mapper
 
 import (
-	"github.com/hhr12138/chat_room/object"
+	"github.com/hhr12138/chat_room-group/object"
 	"time"
 )
 

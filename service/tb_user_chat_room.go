@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/hhr12138/chat_room/mapper"
-	"github.com/hhr12138/chat_room/object"
+	"github.com/hhr12138/chat_room-group/mapper"
+	"github.com/hhr12138/chat_room-group/object"
 )
 
 type AddUserRequest struct {

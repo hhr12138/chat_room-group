@@ -2,8 +2,8 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/hhr12138/chat_room/service"
-	"github.com/hhr12138/chat_room/utils"
+	"github.com/hhr12138/chat_room-group/service"
+	"github.com/hhr12138/chat_room-group/utils"
 	"github.com/hhr12138/door/entity"
 	"net/http"
 )

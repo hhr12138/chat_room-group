@@ -2,7 +2,7 @@ package mapper
 
 import (
 	"database/sql"
-	"github.com/hhr12138/chat_room/object"
+	"github.com/hhr12138/chat_room-group/object"
 	"github.com/jmoiron/sqlx"
 	"time"
 )

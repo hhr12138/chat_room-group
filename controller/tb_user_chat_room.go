@@ -2,7 +2,7 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/hhr12138/chat_room/service"
+	"github.com/hhr12138/chat_room-group/service"
 )
 
 func AddUserToChat(ctx *gin.Context){

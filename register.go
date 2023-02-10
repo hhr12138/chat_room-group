@@ -2,8 +2,8 @@ package chat_room
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/hhr12138/chat_room/controller"
-	"github.com/hhr12138/chat_room/object"
+	"github.com/hhr12138/chat_room-group/controller"
+	"github.com/hhr12138/chat_room-group/object"
 	"github.com/hhr12138/door/filter"
 	"github.com/jmoiron/sqlx"
 )
