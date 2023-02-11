@@ -17,25 +17,25 @@ func CreateChatRoom(ctx *gin.Context) {
 		return
 	}
 	room, err := service.CreateChatRoom(request)
-	if err != nil{
-		ctx.JSON(http.StatusInternalServerError,err.Error())
-	} else{
-		ctx.JSON(http.StatusOK,room)
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, err.Error())
+	} else {
+		ctx.JSON(http.StatusOK, room)
 	}
 }
 
-func DeleteChatRoom(ctx *gin.Context){
+func DeleteChatRoom(ctx *gin.Context) {
 	request := new(service.DeleteChatRoomRequest)
 	err := ctx.ShouldBind(request)
-	if err != nil{
-		ctx.JSON(http.StatusFound,err)
+	if err != nil {
+		ctx.JSON(http.StatusFound, err)
 		return
 	}
 	room, err := service.DeleteChatRoom(request)
-	if err != nil{
-		ctx.JSON(http.StatusInternalServerError,err)
- 	} else{
-		 ctx.JSON(http.StatusOK,room)
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, err)
+	} else {
+		ctx.JSON(http.StatusOK, room)
 	}
 }
 
@@ -53,29 +53,29 @@ func GetAllUserId(ctx *gin.Context) {
 	}
 }
 
-func GetGroupIdsByUserId(ctx *gin.Context){
-	u,_ := ctx.Get("user")
+func GetGroupIdsByUserId(ctx *gin.Context) {
+	u, _ := ctx.Get("user")
 	user := u.(*entity.User)
 	uid := user.Id
 	reply, err := service.GetGroupIdsByUserId(uid)
-	if err != nil{
-		ctx.JSON(http.StatusInternalServerError,err.Error())
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, err.Error())
 	} else {
 		ctx.JSON(http.StatusOK, reply)
 	}
 }
 
-func GetGroupsByUserId(ctx *gin.Context){
+func GetGroupsByUserId(ctx *gin.Context) {
 	uid := utils.GetUser(ctx).Id
-	groupIds,err := service.GetGroupIdsByUserId(uid)
-	if err != nil{
-		ctx.JSON(http.StatusInternalServerError,err.Error())
+	groupIds, err := service.GetGroupIdsByUserId(uid)
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, err.Error())
 		return
 	}
-	groups,err := service.GetGroupsByUserId(groupIds)
-	if err != nil{
-		ctx.JSON(http.StatusInternalServerError,err.Error())
+	groups, err := service.GetGroupsByGroupId(groupIds)
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, err.Error())
 		return
 	}
-	ctx.JSON(http.StatusOK,groups)
+	ctx.JSON(http.StatusOK, groups)
 }
